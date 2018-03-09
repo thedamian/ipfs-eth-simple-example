@@ -59,7 +59,7 @@ window.App = {
       currentIpfsHashElement.src = `http://gateway.ipfs.io/ipfs/${value.valueOf()}`
     }).catch(error => {
       console.error(error)
-      this.setStatus('Error getting currentIpfsHash; see log.')
+      this.setStatus('<span style="color:red;">ERROR getting currentIpfsHash<BR /> '+error+'</span>');
     })
   },
 
@@ -94,7 +94,7 @@ window.App = {
       this.refreshHash()
     }).catch(error => {
       console.error(error)
-      this.setStatus('Error sending coin; see log.')
+      this.setStatus('<BR ?><span style="color:red">'+error+'</span>');
     })
   }
 }
